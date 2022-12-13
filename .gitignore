@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pythonenv
+blogenv/
+
+# node modules
+node_modules/
+
+#visual studio
+.vs/
+obj/
