@@ -31,13 +31,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="blogdiscription\admin.py" />
-    <Compile Include="blogdiscription\apps.py" />
-    <Compile Include="blogdiscription\migrations\__init__.py" />
-    <Compile Include="blogdiscription\models.py" />
-    <Compile Include="blogdiscription\tests.py" />
-    <Compile Include="blogdiscription\views.py" />
-    <Compile Include="blogdiscription\__init__.py" />
+    <Compile Include="blogdescription\admin.py" />
+    <Compile Include="blogdescription\apps.py" />
+    <Compile Include="blogdescription\migrations\__init__.py" />
+    <Compile Include="blogdescription\models.py" />
+    <Compile Include="blogdescription\tests.py" />
+    <Compile Include="blogdescription\views.py" />
+    <Compile Include="blogdescription\__init__.py" />
     <Compile Include="bloglist\admin.py" />
     <Compile Include="bloglist\apps.py" />
     <Compile Include="bloglist\migrations\__init__.py" />
@@ -62,16 +62,16 @@
     <Compile Include="blog\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="blogdiscription\templates\blogdiscription\index.html" />
+    <Content Include="blogdescription\templates\blogdescription\index.html" />
     <Content Include="bloglist\templates\bloglist\index.html" />
     <Content Include="homepage\templates\homepage\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="blogdiscription\" />
-    <Folder Include="blogdiscription\migrations\" />
-    <Folder Include="blogdiscription\templates\" />
-    <Folder Include="blogdiscription\templates\blogdiscription\" />
+    <Folder Include="blogdescription\" />
+    <Folder Include="blogdescription\migrations\" />
+    <Folder Include="blogdescription\templates\" />
+    <Folder Include="blogdescription\templates\blogdescription\" />
     <Folder Include="bloglist\" />
     <Folder Include="bloglist\migrations\" />
     <Folder Include="bloglist\templates\" />
