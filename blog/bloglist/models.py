@@ -16,7 +16,7 @@ class Stories(models.Model):
     )
 
     def __str__(self):
-        return f"ID:{self.story_id} with title {self.story_title} was published on {self.pub_date} "
+        return f"{self.story_id} Title {self.story_title[:30]}"
 
 
 class StoryLinks(models.Model):
@@ -25,11 +25,13 @@ class StoryLinks(models.Model):
         VIDEO = 2
 
     link_id = models.BigAutoField(primary_key=True)
-    story_key = models.ForeignKey(
-        Stories, on_delete=models.CASCADE)
+    story_key = models.ForeignKey(Stories, on_delete=models.CASCADE)
     link = models.CharField(max_length=200)
     link_type = models.IntegerField(choices=LinkTypes.choices, default=LinkTypes.IMAGE)
     link_name = models.CharField(max_length=100)
+
+    def story_key_func(self):
+        return f"{self.story_key.story_id}"
 
     def __str__(self):
         return f"{self.link_name} of type {self.link_type} connected to story {self.story_key}"
