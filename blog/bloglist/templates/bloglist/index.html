@@ -1,9 +1,26 @@
-<html>
-<head><title></title></head>
+{% extends "base.html" %}
 
-<body>
 
-{{ content }}
+{% block title %}
+Story List
+{% endblock title %}
 
-</body>
-</html>
+
+{% block body %}
+<p>
+    I am in story list
+
+    {% for i in Stories %}
+    <h1>{{ i }}</h1>
+
+    {% endfor %}
+
+    {% for i in stor %}
+    <h2>{{i.story_id}}</h2>
+    <h2>{{i.story_title}}</h2>
+    {% endfor %}
+
+
+
+</p>
+ {% endblock body %}
