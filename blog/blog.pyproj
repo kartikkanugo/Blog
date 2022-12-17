@@ -82,6 +82,8 @@
     <Folder Include="blog\" />
     <Folder Include="homepage\" />
     <Folder Include="homepage\migrations\" />
+    <Folder Include="homepage\static\" />
+    <Folder Include="homepage\static\homepage\" />
     <Folder Include="homepage\templates\" />
     <Folder Include="homepage\templates\homepage\" />
   </ItemGroup>
