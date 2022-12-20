@@ -19,6 +19,12 @@ class Stories(models.Model):
         NORMAL = 1
         HIGH = 2
 
+    class Genre(models.TextChoices):
+        HORROR = "Horror"
+        ROMANCE = "Romance"
+        COMEDY = "Comedy"
+        DRAMA = "Drama"
+
     story_id = models.BigAutoField(primary_key=True)
     pub_date = models.DateTimeField("Date Published")
     story_title = models.CharField(max_length=200)
@@ -30,6 +36,9 @@ class Stories(models.Model):
     chapter_id = models.IntegerField(
         default=-1,
         help_text="Put chapter ID 1 if the story will have chapters else leave it as it is",
+    )
+    genre = models.CharField(
+        max_length=100, choices=Genre.choices, default=Genre.DRAMA.value
     )
     story_chapter_link_id = models.IntegerField(
         default=-1, help_text="Id of the story to which the Chapter is linked?"
