@@ -137,3 +137,8 @@ node_modules/
 #visual studio
 .vs/
 obj/
+.vscode/
+
+
+# photos and media
+photos/

@@ -5,7 +5,13 @@ from .models import Stories, StoryLinks
 
 
 class StoryLinksAdmin(admin.ModelAdmin):
-    list_display = ("link_id", "story_key_func", "link", "link_type", "link_name")
+    list_display = (
+        "link_id",
+        "story_key_func",
+        "object_name",
+        "link_type",
+        "url_link",
+    )
 
 
 class StoriesAdmin(admin.ModelAdmin):
