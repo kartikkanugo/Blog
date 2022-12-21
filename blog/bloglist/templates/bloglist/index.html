@@ -11,7 +11,7 @@ Story List
 <main class="container pt-5">
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">{{ object_list.first.story_title }}</h1>
+            <h1 class="display-4 fst-italic">{{ object_list.first.story_title }}</h1> <h3><span class="badge bg-secondary">New Story !!</span></h3>
             <p class="lead my-3">{{ object_list.first.story_gist }}</p>
             <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
         </div>
@@ -19,70 +19,75 @@ Story List
 
     <div class="row mb-2">
         {% for f in featured %}
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">{{ f.genre }}</strong>
-                        <h3 class="mb-0">{{ f.story_title }}</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">{{ f.story_gist }}</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{{ f.genre }}</strong>
+                    <h3 class="mb-0">{{ f.story_title }}</h3>
+                    <div class="mb-1 text-muted">Nov 12</div>
+                    <p class="card-text mb-auto">{{ f.story_gist }}</p>
+                    <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
-                    </div>
                 </div>
             </div>
+        </div>
         {% endfor %}
 
-    <article class="my-3" id="accordion">
-        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-            <h3>Story List</h3>
-        </div>
 
-        <div>
-            <div class="bd-example">
-                <div class="accordion" id="accordionExample">
-                    {% for obj in object_list %}
+        <article class="my-3" id="accordion">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <h3>Accordion</h3>
+                <a class="d-flex align-items-center" href="/docs/5.1/components/accordion/">Documentation</a>
+            </div>
+
+            <div>
+                <div class="bd-example">
+                    <div class="accordion" id="accordionExample">
+                        {% for obj in object_list %}
                         <div class="accordion-item">
-                            <h4 class="accordion-header" id="{% 'heading'|add:forloop.counter %}">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={% "#collapseOne"|add : forloop.counter %} aria-expanded="true" aria-controls={% "collapseOne"|add : forloop.counter %}>
+                            <h4 class="accordion-header" id="{{ "hh"|join:forloop.counter|stringformat:"s" }}">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ "cc"|join:forloop.counter|stringformat:"s" }}" aria-expanded="false" aria-controls="{{ "cc"|join:forloop.counter|stringformat:"s" }}">
                                     {{ obj.story_title }}
                                 </button>
                             </h4>
-                            <div id={% "collapseOne"|add : forloop.counter %} class="accordion-collapse collapse show" aria-labelledby={% "heading"|add : forloop.counter %} data-bs-parent="#accordionExample" style="">
+                            <div id="{{ "cc"|join:forloop.counter|stringformat:"s" }}" class="accordion-collapse collapse" aria-labelledby="{{ "hh"|join:forloop.counter|stringformat:"s" }}" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    {{ obj.story_gist }}
+                                     {{ obj.story_gist }} <strong> <a href="#" class="stretched-link">Continue reading</a> </strong>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
-                    
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+
+
+
+
 </main>
 
 
 
 
 {% for object in object_list %}
-    <h1>{{ object.story_title }}</h1>
+<h1>{{ object.story_title }}</h1>
 
 {% endfor %}
 
 {% for i in object_list %}
-    <h2>{{i.story_id}}</h2>
-    <h2>{{i.story_title}}</h2>
+<h2>{{i.story_id}}</h2>
+<h2>{{i.story_title}}</h2>
 
 {% endfor %}
 
-    <h1>sdfasfasdfdfgdfhjhjhjkjhkhjkll</h1>
+<h1>sdfasfasdfdfgdfhjhjhjkjhkhjkll</h1>
 
 {% for object in featured %}
-    <h1>{{ object.story_title }}</h1>
+<h1>{{ object.story_title }}</h1>
 
 {% endfor %}
 
