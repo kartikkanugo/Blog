@@ -1,9 +1,21 @@
-<html>
-<head><title></title></head>
+{% extends "base.html" %}
+{% load static %}
 
-<body>
+{% block title %}
+{{object.story_title}}
+{% endblock title %}
 
-{{ content }}
+{% block body %}
 
-</body>
-</html>
+<div class=" my-4">
+    <p>sadfhlaksjhf</p>
+    <p>{{object.story_title}}</p>
+    <p>{{MEDIA_ROOT}}</p>
+
+    <img src="{{ MEDIA_URL }}{{sense}}" alt="Italian Trulli">
+    <p>sadfhlaksjhf</p>
+
+
+</div>
+
+{% endblock body %}
