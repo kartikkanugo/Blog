@@ -142,3 +142,5 @@ obj/
 
 # photos and media
 media/
+/blog/static/admin
+/blog/bin
