@@ -1,7 +1,7 @@
 
 from django.views.generic.base import TemplateView
 from .models import AboutMeDB
- 
+
 
 # Create your views here.
 class AboutMeDetailView(TemplateView):

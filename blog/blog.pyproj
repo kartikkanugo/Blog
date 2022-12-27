@@ -1,110 +1,358 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <Name>blog</Name>
-    <RootNamespace>blog</RootNamespace>
-    <InterpreterId>MSBuild|blogenv|$(MSBuildProjectFullPath)</InterpreterId>
-    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
-  </PropertyGroup>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>1165c449-ca30-4daa-b95c-93167a119441</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <ProjectGuid>{98655b9d-44f2-43d8-8acb-0ebd142a0ded}</ProjectGuid>
+    <ProjectHome />
     <StartupFile>manage.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
-    <LaunchProvider>Django launcher</LaunchProvider>
-    <DjangoSettingsModule>blog.settings</DjangoSettingsModule>
-    <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <OutputPath>.</OutputPath>
-    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId>MSBuild|blogenv|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <DjangoSettingsModule>blog.settings</DjangoSettingsModule>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>true</DebugSymbols>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="aboutme\templates\aboutme\index.html" />
+    <Content Include="blogdescription\templates\blogdescription\image.html" />
+    <Content Include="blogdescription\templates\blogdescription\index.html" />
+    <Content Include="bloglist\templates\bloglist\index.html" />
+    <Content Include="homepage\templates\homepage\index.html" />
+    <Content Include="media\images\1_beauty.jpg" />
+    <Content Include="media\images\1_beauty22.jpg" />
+    <Content Include="media\images\1_sense.jpg" />
+    <Content Include="node_modules\%40popperjs\core\dist\cjs\enums.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\cjs\popper-base.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\cjs\popper-lite.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\cjs\popper.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\createPopper.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\contains.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getBoundingClientRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getClippingRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getCompositeRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getComputedStyle.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getDocumentElement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getDocumentRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getHTMLElementScroll.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getLayoutRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getNodeName.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getNodeScroll.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getOffsetParent.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getParentNode.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getScrollParent.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getViewportRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getWindow.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getWindowScroll.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\getWindowScrollBarX.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\instanceOf.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\isLayoutViewport.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\isScrollParent.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\isTableElement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\dom-utils\listScrollParents.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\enums.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\index.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\applyStyles.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\arrow.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\computeStyles.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\eventListeners.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\flip.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\hide.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\index.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\offset.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\popperOffsets.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\modifiers\preventOverflow.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\popper-base.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\popper-lite.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\popper.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\types.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\computeAutoPlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\computeOffsets.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\debounce.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\detectOverflow.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\expandToHashMap.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\format.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getAltAxis.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getAltLen.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getBasePlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getFreshSideObject.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getMainAxisFromPlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getOppositePlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getOppositeVariationPlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\getVariation.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\math.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\mergeByName.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\mergePaddingObject.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\orderModifiers.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\rectToClientRect.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\uniqueBy.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\userAgent.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\validateModifiers.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\esm\utils\within.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\enums.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\enums.min.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\popper-base.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\popper-base.min.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\popper-lite.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\popper-lite.min.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\popper.js" />
+    <Content Include="node_modules\%40popperjs\core\dist\umd\popper.min.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\createPopper.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\contains.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getBoundingClientRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getClippingRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getCompositeRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getComputedStyle.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getDocumentElement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getDocumentRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getHTMLElementScroll.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getLayoutRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getNodeName.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getNodeScroll.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getOffsetParent.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getParentNode.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getScrollParent.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getViewportRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getWindow.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getWindowScroll.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\getWindowScrollBarX.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\instanceOf.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\isLayoutViewport.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\isScrollParent.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\isTableElement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\dom-utils\listScrollParents.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\enums.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\index.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\applyStyles.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\arrow.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\computeStyles.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\eventListeners.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\flip.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\hide.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\index.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\offset.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\popperOffsets.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\modifiers\preventOverflow.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\popper-base.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\popper-lite.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\popper.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\types.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\computeAutoPlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\computeOffsets.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\debounce.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\detectOverflow.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\expandToHashMap.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\format.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getAltAxis.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getAltLen.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getBasePlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getFreshSideObject.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getMainAxisFromPlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getOppositePlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getOppositeVariationPlacement.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\getVariation.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\math.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\mergeByName.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\mergePaddingObject.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\orderModifiers.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\rectToClientRect.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\uniqueBy.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\userAgent.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\validateModifiers.js" />
+    <Content Include="node_modules\%40popperjs\core\lib\utils\within.js" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="node_modules\bootstrap\js\dist\alert.js" />
+    <Content Include="node_modules\bootstrap\js\dist\base-component.js" />
+    <Content Include="node_modules\bootstrap\js\dist\button.js" />
+    <Content Include="node_modules\bootstrap\js\dist\carousel.js" />
+    <Content Include="node_modules\bootstrap\js\dist\collapse.js" />
+    <Content Include="node_modules\bootstrap\js\dist\dom\data.js" />
+    <Content Include="node_modules\bootstrap\js\dist\dom\event-handler.js" />
+    <Content Include="node_modules\bootstrap\js\dist\dom\manipulator.js" />
+    <Content Include="node_modules\bootstrap\js\dist\dom\selector-engine.js" />
+    <Content Include="node_modules\bootstrap\js\dist\dropdown.js" />
+    <Content Include="node_modules\bootstrap\js\dist\modal.js" />
+    <Content Include="node_modules\bootstrap\js\dist\offcanvas.js" />
+    <Content Include="node_modules\bootstrap\js\dist\popover.js" />
+    <Content Include="node_modules\bootstrap\js\dist\scrollspy.js" />
+    <Content Include="node_modules\bootstrap\js\dist\tab.js" />
+    <Content Include="node_modules\bootstrap\js\dist\toast.js" />
+    <Content Include="node_modules\bootstrap\js\dist\tooltip.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\backdrop.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\component-functions.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\config.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\focustrap.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\index.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\sanitizer.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\scrollbar.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\swipe.js" />
+    <Content Include="node_modules\bootstrap\js\dist\util\template-factory.js" />
+    <Content Include="node_modules\bootstrap\js\src\alert.js" />
+    <Content Include="node_modules\bootstrap\js\src\base-component.js" />
+    <Content Include="node_modules\bootstrap\js\src\button.js" />
+    <Content Include="node_modules\bootstrap\js\src\carousel.js" />
+    <Content Include="node_modules\bootstrap\js\src\collapse.js" />
+    <Content Include="node_modules\bootstrap\js\src\dom\data.js" />
+    <Content Include="node_modules\bootstrap\js\src\dom\event-handler.js" />
+    <Content Include="node_modules\bootstrap\js\src\dom\manipulator.js" />
+    <Content Include="node_modules\bootstrap\js\src\dom\selector-engine.js" />
+    <Content Include="node_modules\bootstrap\js\src\dropdown.js" />
+    <Content Include="node_modules\bootstrap\js\src\modal.js" />
+    <Content Include="node_modules\bootstrap\js\src\offcanvas.js" />
+    <Content Include="node_modules\bootstrap\js\src\popover.js" />
+    <Content Include="node_modules\bootstrap\js\src\scrollspy.js" />
+    <Content Include="node_modules\bootstrap\js\src\tab.js" />
+    <Content Include="node_modules\bootstrap\js\src\toast.js" />
+    <Content Include="node_modules\bootstrap\js\src\tooltip.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\backdrop.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\component-functions.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\config.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\focustrap.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\index.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\sanitizer.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\scrollbar.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\swipe.js" />
+    <Content Include="node_modules\bootstrap\js\src\util\template-factory.js" />
+    <Content Include="obj\Any CPU\Debug\blog.pyproj.FileListAbsolute.txt" />
+    <Content Include="requirements.txt" />
+    <Content Include="templates\base.html" />
+    <Content Include="templates\navbar.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutme\admin.py" />
+    <Compile Include="aboutme\apps.py" />
+    <Compile Include="aboutme\migrations\0001_initial.py" />
+    <Compile Include="aboutme\migrations\__init__.py" />
+    <Compile Include="aboutme\models.py" />
+    <Compile Include="aboutme\tests.py" />
+    <Compile Include="aboutme\urls.py" />
+    <Compile Include="aboutme\views.py" />
+    <Compile Include="aboutme\__init__.py" />
     <Compile Include="blogdescription\admin.py" />
     <Compile Include="blogdescription\apps.py" />
+    <Compile Include="blogdescription\migrations\0001_initial.py" />
     <Compile Include="blogdescription\migrations\__init__.py" />
     <Compile Include="blogdescription\models.py" />
     <Compile Include="blogdescription\tests.py" />
-    <Compile Include="blogdescription\urls.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="blogdescription\urls.py" />
     <Compile Include="blogdescription\views.py" />
     <Compile Include="blogdescription\__init__.py" />
     <Compile Include="bloglist\admin.py" />
     <Compile Include="bloglist\apps.py" />
+    <Compile Include="bloglist\migrations\0001_initial.py" />
     <Compile Include="bloglist\migrations\__init__.py" />
     <Compile Include="bloglist\models.py" />
     <Compile Include="bloglist\tests.py" />
+    <Compile Include="bloglist\urls.py" />
     <Compile Include="bloglist\views.py" />
     <Compile Include="bloglist\__init__.py" />
-    <Compile Include="homepage\admin.py" />
-    <Compile Include="homepage\apps.py" />
-    <Compile Include="homepage\migrations\__init__.py" />
-    <Compile Include="homepage\models.py" />
-    <Compile Include="homepage\tests.py" />
-    <Compile Include="homepage\urls.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="homepage\views.py" />
-    <Compile Include="homepage\__init__.py" />
-    <Compile Include="manage.py" />
-    <Compile Include="blog\__init__.py" />
     <Compile Include="blog\settings.py" />
     <Compile Include="blog\urls.py" />
     <Compile Include="blog\wsgi.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="homepage\admin.py" />
+    <Compile Include="homepage\apps.py" />
+    <Compile Include="homepage\migrations\0001_initial.py" />
+    <Compile Include="homepage\migrations\0002_delete_homepagedata.py" />
+    <Compile Include="homepage\migrations\__init__.py" />
+    <Compile Include="homepage\models.py" />
+    <Compile Include="homepage\tests.py" />
+    <Compile Include="homepage\urls.py" />
+    <Compile Include="homepage\views.py" />
+    <Compile Include="homepage\__init__.py" />
+    <Compile Include="manage.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="blogdescription\templates\blogdescription\index.html" />
-    <Content Include="bloglist\templates\bloglist\index.html" />
-    <Content Include="homepage\templates\homepage\index.html" />
-    <Content Include="requirements.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="blogdescription\" />
-    <Folder Include="blogdescription\migrations\" />
+    <Folder Include="aboutme" />
+    <Folder Include="aboutme\migrations" />
+    <Folder Include="aboutme\templates\" />
+    <Folder Include="aboutme\templates\aboutme" />
+    <Folder Include="blog" />
+    <Folder Include="blogdescription" />
+    <Folder Include="blogdescription\migrations" />
     <Folder Include="blogdescription\templates\" />
-    <Folder Include="blogdescription\templates\blogdescription\" />
-    <Folder Include="bloglist\" />
-    <Folder Include="bloglist\migrations\" />
+    <Folder Include="blogdescription\templates\blogdescription" />
+    <Folder Include="bloglist" />
+    <Folder Include="bloglist\migrations" />
     <Folder Include="bloglist\templates\" />
-    <Folder Include="bloglist\templates\bloglist\" />
-    <Folder Include="blog\" />
-    <Folder Include="homepage\" />
-    <Folder Include="homepage\migrations\" />
-    <Folder Include="homepage\static\" />
-    <Folder Include="homepage\static\homepage\" />
+    <Folder Include="bloglist\templates\bloglist" />
+    <Folder Include="homepage" />
+    <Folder Include="homepage\migrations" />
     <Folder Include="homepage\templates\" />
-    <Folder Include="homepage\templates\homepage\" />
+    <Folder Include="homepage\templates\homepage" />
+    <Folder Include="media\" />
+    <Folder Include="media\images" />
+    <Folder Include="node_modules\" />
+    <Folder Include="node_modules\%40popperjs\" />
+    <Folder Include="node_modules\%40popperjs\core\" />
+    <Folder Include="node_modules\%40popperjs\core\dist\" />
+    <Folder Include="node_modules\%40popperjs\core\dist\cjs" />
+    <Folder Include="node_modules\%40popperjs\core\dist\esm" />
+    <Folder Include="node_modules\%40popperjs\core\dist\esm\dom-utils" />
+    <Folder Include="node_modules\%40popperjs\core\dist\esm\modifiers" />
+    <Folder Include="node_modules\%40popperjs\core\dist\esm\utils" />
+    <Folder Include="node_modules\%40popperjs\core\dist\umd" />
+    <Folder Include="node_modules\%40popperjs\core\lib" />
+    <Folder Include="node_modules\%40popperjs\core\lib\dom-utils" />
+    <Folder Include="node_modules\%40popperjs\core\lib\modifiers" />
+    <Folder Include="node_modules\%40popperjs\core\lib\utils" />
+    <Folder Include="node_modules\bootstrap\" />
+    <Folder Include="node_modules\bootstrap\dist\" />
+    <Folder Include="node_modules\bootstrap\dist\css" />
+    <Folder Include="node_modules\bootstrap\dist\js" />
+    <Folder Include="node_modules\bootstrap\js\" />
+    <Folder Include="node_modules\bootstrap\js\dist" />
+    <Folder Include="node_modules\bootstrap\js\dist\dom" />
+    <Folder Include="node_modules\bootstrap\js\dist\util" />
+    <Folder Include="node_modules\bootstrap\js\src" />
+    <Folder Include="node_modules\bootstrap\js\src\dom" />
+    <Folder Include="node_modules\bootstrap\js\src\util" />
+    <Folder Include="obj\" />
+    <Folder Include="obj\Any CPU\" />
+    <Folder Include="obj\Any CPU\Debug" />
+    <Folder Include="templates" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="blogenv\">
       <Id>blogenv</Id>
-      <Version>3.9</Version>
       <Description>blogenv (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Version>3.9</Version>
       <Architecture>X64</Architecture>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
     </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
-  <!-- Specify pre- and post-build commands in the BeforeBuild and 
-       AfterBuild targets below. -->
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
