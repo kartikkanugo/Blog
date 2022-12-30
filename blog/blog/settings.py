@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import posixpath
+import json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -121,3 +122,16 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ["static"]))
 # config/settings.py
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR + "/media/"
+
+
+# configuration data stored in a secret file
+json_file = open(BASE_DIR + "/config_data.json", "r")
+json_data = json.load(json_file)
+
+# emails settings
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = json_data["EMAIL_HOST"]
+EMAIL_USE_TLS = True
+EMAIL_PORT = json_data["EMAIL_PORT"]
+EMAIL_HOST_USER = json_data["EMAIL_HOST_USER"]
+EMAIL_HOST_PASSWORD = json_data["EMAIL_HOST_PASSWORD"]
