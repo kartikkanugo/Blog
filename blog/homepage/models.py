@@ -1,5 +1,10 @@
 from django.db import models
 
-# Create your models here.
-# class homePageData(models.Model):
-#    pass
+
+
+class Subscriber(models.Model):
+    email_id = models.BigAutoField(primary_key=True)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.email
