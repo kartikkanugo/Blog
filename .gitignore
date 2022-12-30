@@ -147,3 +147,4 @@ media/
 visual studio
 /blog/static/admin
 /blog/bin
+/blog/config_data.json
