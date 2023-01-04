@@ -31,6 +31,7 @@ urlpatterns = [
     path("bloglist/", include("bloglist.urls")),
     path("blogdesc/", include("blogdescription.urls")),
     path("aboutme/", include("aboutme.urls")),
+    path("subscribermail/", include("subscribermail.urls")),
 ]
 
 

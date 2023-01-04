@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "bloglist",
     "blogdescription",
     "aboutme",
+    "subscribermail",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
